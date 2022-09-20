@@ -1,0 +1,39 @@
+import java.util.*;
+class Denomination
+{
+  public static void main(String arg[])
+  {
+    int amt,r2000=0,r500=0,r200=0,r100=0;
+    Scanner sc = new Scanner(System.in);
+    
+    System.out.println("enter the amount in rupees:");
+    amt = sc.nextInt();
+    
+    while(amt>=2000)
+  {
+    r2000 = amt/2000;
+    amt = amt%2000;
+    System.out.println("total number of 2000 rupees notes :"+r2000);
+   }
+    while(amt>=500);
+  {
+    r500 = amt/500;
+    amt = amt%500;
+    System.out.print("\ntotal number of 500 rupess notes :"+r500);
+   }
+   while(amt>=200)
+  {
+   r200 = amt/200;
+   amt = amt%200;
+   System.out.println("\ntotal number of 200 rupees notes:"+r200);  
+  }
+    while(amt>=100);
+  {
+    r100 = amt/100;
+    amt = amt%100; 
+    System.out.println("\ntotal number of 100 rupess notes :"+r100);
+   }
+   int count =r2000+r500+r200+r100;
+   System.out.println("total number of notes require: \n\n"+count);
+   }
+}
