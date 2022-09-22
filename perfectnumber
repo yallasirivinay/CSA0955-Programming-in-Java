@@ -1,6 +1,6 @@
 import java.util.*;
 import java.util.Scanner;  
-class perfectnumber 
+class perfectnumber  
 {  
 public static void main(String args[])    
 { 
@@ -32,6 +32,7 @@ System.out.println(n+" is a perfect number.");
 else  
 {
 System.out.println(n+" is not a perfect number.");   
+}
 }
 }
 catch(Exception e)
