@@ -1,0 +1,58 @@
+import java.util.*;
+import java.util.scanner;
+class compositeArray
+
+{
+	static int sum = 0;
+	static int compositeCount(int arr[], int n)
+	{
+		int max_val = Arrays.stream(arr).max().getAsInt();
+		Vector<Boolean> prime = new Vector<Boolean>(max_val + 1);
+		for (int i = 0; i < max_val + 1; i++)
+		{
+			prime.add(i, Boolean.TRUE);
+		}
+		prime.add(0, Boolean.TRUE);
+		prime.add(1, Boolean.TRUE);
+		for (int p = 2; p * p <= max_val; p++)
+		{
+			if (prime.get(p) == true)
+			{
+				for (int i = p * 2; i <= max_val; i += p)
+				{
+					prime.add(i, Boolean.FALSE);
+				}
+			}
+		}
+		int count = 0;
+		for (int i = 0; i < n; i++)
+		{
+			if (!prime.get(arr[i]))
+			{
+				count++;
+				sum = sum + arr[i];
+			}
+		}
+		return count;
+	}
+	public static void main(String[] args)
+	{
+	try
+	{
+
+            Scanner sc = new Scanner(System.in);
+            System.out.println("enter no.of array elements");
+            int n = sc.nextInt();
+            int[] arr = new int[10];
+            System.out.println("enter array elements value"+j);
+            for(int j=0;j<=n;j++)
+            {
+                arr[j]=sc.nextInt();
+            }
+		System.out.print("Count of Composite Numbers = "+ compositeCount(arr, n));
+	}
+catch(Exception e);
+{
+System.out.println("enter only float values:");
+}
+}
