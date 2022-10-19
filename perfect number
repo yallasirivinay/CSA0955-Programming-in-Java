@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class perfect
+{
+public static void main(String[] args)
+{
+
+int n,sum=0;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter the no that to check");
+n=sc.nextInt();
+for(int i=1;i<n;i++)
+{
+if(n%1==0)
+{
+sum=sum+1;
+}
+}
+if(sum==n)
+{
+System.out.println("it is a perfect number:");
+}
+else
+{
+System.out.println("it is not a perfect number ");
+}
+}
+} 
